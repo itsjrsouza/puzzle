@@ -7,6 +7,10 @@
     font: inherit;
 }
 
+html, body {
+    height: 100%;
+}
+
 html {
     display: flex;
     justify-content: center;
@@ -16,9 +20,14 @@ html {
 
 body {
     font-family: 'Pixelify Sans', sans-serif;
-    background: linear-gradient(180deg, #330867 0%, #2A5298 50.71%, #6DD5ED 106.01%);
+    background: linear-gradient(180deg, #330867 0%, #2A5298 50.71%, #6DD5ED 106.01%) no-repeat;
 
     color: #F5F5F5;
+
+    min-height: 100%;
+
+    overflow: hidden;
+
 }
 
 main {
@@ -27,7 +36,7 @@ main {
     align-items: center;
     gap: 2.5rem;
 
-    padding: 13.625rem;
+    padding: 7.125rem;
 
     & h1 {
         font-size: 2.5rem;
@@ -92,4 +101,39 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;  
 }
 
+/* Para telas menores que 768px (tablets e smartphones) */
+@media (max-width: 768px) {
+    main {
+        padding: 3rem;  /* Ajuste de padding para telas menores */
+    }
 
+    .button {
+        width: 7rem;  /* Ajuste do tamanho do botão */
+        font-size: 1.5rem;  /* Redução do tamanho da fonte */
+    }
+
+    .infos input {
+        padding: 1rem;  /* Ajuste no padding dos inputs */
+        font-size: 0.875rem;  /* Redução do tamanho da fonte */
+    }
+}
+
+/* Para telas menores que 375px (celulares pequenos) */
+@media (max-width: 375px) {
+    main {
+        padding: 2rem;  /* Mais redução de padding */
+    }
+
+    .button {
+        width: 6rem;  /* Ajuste ainda maior no tamanho do botão */
+        font-size: 1.25rem;  /* Ajuste no tamanho da fonte */
+    }
+
+    h1 {
+        font-size: 2rem;  /* Ajuste no tamanho do título */
+    }
+
+    .subtitle h4 {
+        font-size: 1.25rem;  /* Ajuste do tamanho da legenda */
+    }
+}
