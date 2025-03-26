@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="imagex/png" href="./assets/puzzle.svg">
+
+    <title>Guess the number</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Guess the number...</h1>
+
+      <div class="subtitle">
+      <h4>
+        Pensei num número de 1 a 10.
+        <br>Três chances!
+        <br>Bora?
+      </h4>
+    </div>
+
+      <div class="infos">
+        <input
+          type="number"
+          name="guess"
+          id="numeroChute"
+          placeholder="Escreva o número aqui" required
+        />
+    </div>
+
+        <button onclick="verificaChute()" id="botaoChute" class="button">try</button>
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
